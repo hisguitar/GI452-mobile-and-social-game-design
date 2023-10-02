@@ -20,7 +20,7 @@ public class RankUIManager : MonoBehaviour
         {
             GameObject rankObj =Instantiate(rankDataPrefab, rankPanel) as GameObject;
             RankData rankData = rankObj.GetComponent<RankData>();
-            rankData.playerData = new PlayerData(playerDatas[i].rankNumber, playerDatas[i].playerName,
+            rankData.playerData = new PlayerData(playerDatas[i+].rankNumber, playerDatas[i].playerName,
                 playerDatas[i].playerScore);
             rankData.UpdateData();
             createPlayerDatas.Add(rankObj);

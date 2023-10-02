@@ -26,10 +26,8 @@ public class PlayerController : MonoBehaviour
         gameActionMap = playerInput.actions.FindActionMap("Game");
     }
 
-    /* OnEnable and OnDisable used [Find..]
-     * to reduce script execution for increased performance.*/
-    /* When you using OnEnable you need to use Awake() insteed Start() method
-     * because OnEnable will start before Start()*/
+    /* OnEnable and OnDisable are used to reduce script execution.
+     * OnEnable will be started before "Start()", so you need to use "Awake()" instead of "Start()" function. */
     private void OnEnable()
     {
         gameActionMap.Enable();
